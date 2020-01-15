@@ -1,0 +1,181 @@
+$colors: (
+        main: #fff, // Body Main Text
+        primary: #097bd8, // headings
+        primary2: #2ba3e9, // headings
+        primaryDark: #070f10, // headings
+        
+        dark: #060606,
+        
+        mainGradColor1: transparent, // Gradient Color 1 Intro Bg 
+        mainGradColor2: #097BD8, // Gradient Color 2 Intro Bg
+       
+        mainGrad1Color1: #1CA3E9, // Gradient Color 1 Intro Bg 
+        mainGrad1Color2: #09C3D8, // Gradient Color 2 Intro Bg
+
+        blackColor: #000,
+        whiteColor: #fff,
+        yellowColor: #E4D234,
+
+        whiteTrans10: rgba(255, 255,255,0.1),
+
+        selectionBg: #097bd8,
+        selectionColor: #fff,
+        scrollTrackBg: #f1f1f1,
+        scrollThumbBg: #888,
+        scrollThumbHoverBg: #555,
+);
+
+$transition: (
+  main: all 0.5s ease
+);
+
+::-moz-selection{color: map_get($colors, selectionColor);background: map_get($colors, selectionBg);}
+::selection {color: map_get($colors, selectionColor);background: map_get($colors, selectionBg);}
+::-webkit-scrollbar-track {background: map_get($colors, scrollTrackBg);}
+::-webkit-scrollbar-thumb {background: map_get($colors, scrollThumbBg);}
+::-webkit-scrollbar-thumb:hover {background: map_get($colors, scrollThumbHoverBg);}
+
+body{color: map-get($colors, main);background-color: map-get($colors, blackColor );}
+.dark-sec{color: map-get($colors, whiteColor);}
+.light-sec{color: map-get($colors, blackColor);}
+.page-wrapper{background: map-get($colors, whiteColor );}
+
+.bg-primary, .btn-primary
+{
+  background: map-get($colors, primary) !important;
+}
+.text-primary{
+  color: map-get($colors, primary) !important;
+}
+.border-primary{
+  border-color: map-get($colors, primary) !important;
+}
+.bg-secondary, .btn-secondary{
+  background-color:  map-get($colors, secondary) !important;
+}
+.text-secondary{
+  color: map-get($colors, secondary) !important;
+}
+.border-secondary{
+  border-color:  map-get($colors, secondary) !important;
+}
+.btn-primary, .btn-secondary{
+  color: map-get($colors, whiteColor) !important;
+}
+.btn-primary, .btn-secondary{border-color: transparent!important;}
+
+.bg-primaryDark{background: map-get($colors, primaryDark );}
+
+.bg-primary-gradient-y, .team-memb-tit {
+  background: map-get($colors, primary);
+  background: -moz-linear-gradient(bottom, map-get($colors, mainGradColor1) 40%, map-get($colors, mainGradColor2) 80%, map-get($colors, mainGradColor2) 100%);
+  background: -webkit-linear-gradient(bottom, map-get($colors, mainGradColor1) 40%, map-get($colors, mainGradColor2) 80%, map-get($colors, mainGradColor2) 100%);
+  background: -o-linear-gradient(bottom, map-get($colors, mainGradColor1) 40%, map-get($colors, mainGradColor2) 80%, map-get($colors, mainGradColor2) 100%);
+  background: -ms-linear-gradient(bottom, map-get($colors, mainGradColor1) 40%, map-get($colors, mainGradColor2) 80%, map-get($colors, mainGradColor2) 100%);
+  background: linear-gradient(to bottom, map-get($colors, mainGradColor1) 40%, map-get($colors, mainGradColor2) 80%, map-get($colors, mainGradColor2) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='map-get($colors, mainGradColor1)', endColorstr='map-get($colors, mainGradColor2)', GradientType=1);
+}
+
+.bg-primary-gradient-1-y, .team-category-item {
+  background: map-get($colors, primary);
+  background: -moz-linear-gradient(bottom, map-get($colors, mainGrad1Color1) 0%, map-get($colors, mainGrad1Color2) 100%);
+  background: -webkit-linear-gradient(bottom, map-get($colors, mainGrad1Color1) 0%, map-get($colors, mainGrad1Color2) 100%);
+  background: -o-linear-gradient(bottom, map-get($colors, mainGrad1Color1) 0%, map-get($colors, mainGrad1Color2) 100%);
+  background: -ms-linear-gradient(bottom, map-get($colors, mainGrad1Color1) 0%, map-get($colors, mainGrad1Color2) 100%);
+  background: linear-gradient(to bottom, map-get($colors, mainGrad1Color1) 0%, map-get($colors, mainGrad1Color2) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='map-get($colors, mainGrad1Color1)', endColorstr='map-get($colors, mainGrad1Color2)', GradientType=1);
+}
+
+.btn-white{background-color: #fff; color: map-get($colors, dark)!important;}
+
+.blk-dark{color: map-get($colors, blackColor );}
+.blk-dark-2{color: map-get($colors, dark );}
+
+
+/* Loader */
+.loader-svg text {
+  fill: map-get($colors, whiteTrans10 );
+  stroke: map-get($colors, primary );
+}
+
+/* Header */
+.header-fixed{background: map-get($colors, primaryDark );}
+.navbar-dark .navbar-nav .nav-link {
+  color: map-get($colors, whiteColor );
+}
+.navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link{
+  color: map-get($colors, primary );
+}
+
+/* Headings */
+.heading-tit:before{background: map-get($colors, primary );}
+
+/* Page Title */
+#pg-tit{background: map-get($colors, primaryDark );}
+
+/* Footer */
+.footer-social a{color: map-get($colors, primary );background: map-get($colors, whiteColor );}
+.footer-social a:hover{color: map-get($colors, whiteColor );background: map-get($colors, primary );}
+.footer-nav a{color: map-get($colors, whiteColor );}
+.footer-nav a:hover{color: map-get($colors, primary );}
+
+/* Counters */
+.counter-desc-item span{color: map-get($colors, primary );}
+.counter-desc-item{color: map-get($colors, primaryDark );}
+.counter-desc-item.active{color: map-get($colors, primary );}
+
+/**/
+.nav-slider a::before,
+.horz-slide-tit:before,
+.service-tit:after{background: map-get($colors, primary );}
+
+/* Service Page */
+.service-desc{background: map-get($colors, whiteColor );color: map-get($colors, dark );}
+#services-pg .row:nth-child(even) .service-desc{background: map-get($colors, primaryDark );color: map-get($colors, whiteColor );}
+
+/* Contact Page */
+.contact-pg-inner{background: map-get($colors, primaryDark );}
+
+/* About Page */
+.team-memb-n{color: map-get($colors, whiteColor );}
+.team-memb-p{color: map-get($colors, yellowColor );}
+.fancybox-thumbs__list a:before{border-color: map-get($colors, primary );}
+.about-desc-blk .row > div:first-child:before{background: map-get($colors, primary2 );}
+
+/* Careers Page */
+.career-exp:after{background: map-get($colors, primary );}
+
+/* Projects Page */
+#projects-pg .tab-pane .projects-row:nth-child(odd){background: map-get($colors, primaryDark );}
+#projects-pg .tab-pane .projects-row:nth-child(even){background: map-get($colors, whiteColor );}
+#projects-pg .tab-pane .projects-row:nth-child(odd) .project-img img{
+  background: rgba(0, 0, 0, 0.5);
+}
+#projects-pg .tab-pane .projects-row:nth-child(even) .project-img img{
+  background: rgba(255, 255, 255, 0.5);
+}
+#projects-pg .tab-pane .projects-row:nth-child(odd) .project-lnk{
+  color: rgba(255, 255, 255, 1)!important;
+}
+#projects-pg .tab-pane .projects-row:nth-child(even) .project-lnk,
+#projects-pg .tab-pane .projects-row:nth-child(even) .project-n{
+  color: map-get($colors, dark )!important;
+}
+
+.project-lnk:after{background: map-get($colors, primary );}
+
+#projects-pg .nav-pills .nav-link{color: #fff!important;}
+#projects-pg .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  background-color: map-get($colors, primary );
+}
+
+#project-carousel.owl-carousel button.owl-dot.active{background: map-get($colors, dark );}
+#project-carousel.owl-carousel button.owl-dot{border-color: map-get($colors, dark )!important;}
+
+/* Transition */
+a, .btn:before, .nav-item .nav-link:after,
+#header-wrap,
+#header-wrap.header-fixed .navbar-brand,
+#header-wrap.header-fixed .navbar-brand img{
+  transition: map_get($transition, main);
+}
