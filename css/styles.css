@@ -269,17 +269,25 @@ a:hover, .btn-link:hover{text-decoration: none;}
 .mocks-mob{display:flex; }
 .mocks-mob img{width: 60%;
     height: 400px;
-    flex: 0 0 60%;/* transform: skew(0deg, 30deg); */margin: 0 -60px;position: relative;object-fit: cover;object-position: top;clip-path: polygon(38% 13%, 90% 1%, 90% 100%, 38% 79%);    }
+    flex: 0 0 60%;/* transform: skew(0deg, 30deg); */
+    margin: 0 -60px;position: relative;
+    object-fit: cover;
+    object-position: top;
+    clip-path: polygon(38% 13%, 90% 1%, 90% 100%, 38% 79%);    
+}
 .mocks-mob img:first-child{z-index: 100;}
 .mocks-mob img:nth-child(2){z-index: 10;}
 .mocks-mob img:last-child{z-index: 1;}
 
 .mocks-none{padding:30px 0;
     display: flex;justify-content: space-between;flex-wrap: wrap;
+    align-items: center;
 }
-.mocks-none img:first-child{transform: translateY(0px);flex: 0 0 30%;width:30%;}
-.mocks-none img:nth-child(2){transform: translateY(0px);flex: 0 0 30%;width:30%;}
-.mocks-none img:nth-child(3){transform: translateY(0px);flex: 0 0 30%;width:30%;}
+.mocks-none img:first-child,
+.mocks-none img:nth-child(2),
+.mocks-none img:nth-child(3){
+    transform: translateY(0px);flex: 0 0 30%;width:30%;
+}
 .active .mocks-none img:first-child{transform: translateY(-30px);}
 .active .mocks-none img:nth-child(2){transform: translateY(30px);}
 .active .mocks-none img:nth-child(3){transform: translateY(-30px);}
