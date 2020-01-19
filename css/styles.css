@@ -63,7 +63,7 @@ a:hover, .btn-link:hover{text-decoration: none;}
     visibility: hidden;
 }
 #loader{
-    position: absolute;top:0;right:0;left:0;width:100vw;height:100vh;display:flex;align-items: center;justify-content: center;
+    position: fixed;top:0;right:0;left:0;width:100vw;height:100vh;display:flex;align-items: center;justify-content: center;
 }
 .lds-ripple {
     display: inline-block;

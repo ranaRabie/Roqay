@@ -230,7 +230,17 @@ $(document).ready(function () {
         servicesSlider();
     }
     
-    
+    var ua = navigator.userAgent.toLowerCase(); 
+    if (ua.indexOf('safari') != -1) { 
+        if (ua.indexOf('chrome') > -1) {
+            // alert("1") // Chrome
+        } else {
+            // alert("2") // Safari
+
+            $('.mocks-mob').addClass('mocks-none');
+            $('.mocks-mob').removeClass('mocks-mob');
+        }
+    }
 
     if($('#project-carousel')){
         $('#project-carousel.mob-carousel').owlCarousel({
