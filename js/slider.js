@@ -145,6 +145,10 @@ function horzSliderMove(dir){
     let wrapperLeft = $('.horz-slides-wrapper').css('left');
     let wrapperLeftVal = wrapperLeft.slice(0, -2);
 
+    let slidesNo = $('#horz-slider .horz-slide').length;
+    let slidesWrapperFullWidth = slidesNo * slideWhidth
+    
+
     setTimeout(function(){
         if(dir === 'next'){
             // IF Last Child Get First Child  & Move Wrapper to its Start
@@ -154,7 +158,15 @@ function horzSliderMove(dir){
                 $('.horz-slides-wrapper').css('left', '0px');
             }else{
                 activeSlide.next().addClass('active');
-                $('.horz-slides-wrapper').css('left', parseInt(wrapperLeftVal)-parseInt(slideWhidth)+'px');
+                
+                let leftVal = parseInt(wrapperLeftVal)-parseInt(slideWhidth);
+
+                if(leftVal >= slidesWrapperFullWidth - slideWhidth){
+                    $('.horz-slides-wrapper').css('left', '0 px');
+                }else{
+                    $('.horz-slides-wrapper').css('left', leftVal+'px');
+                }
+            
             } 
         }else if(dir === 'prev'){
             // IF First Child Get Last Child & Move Wrapper to its end 
