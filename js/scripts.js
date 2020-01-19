@@ -236,7 +236,6 @@ $(document).ready(function () {
             // alert("1") // Chrome
         } else {
             // alert("2") // Safari
-
             $('.mocks-mob').addClass('mocks-none');
             $('.mocks-mob').removeClass('mocks-mob');
         }

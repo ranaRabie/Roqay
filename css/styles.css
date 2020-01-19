@@ -161,6 +161,13 @@ a:hover, .btn-link:hover{text-decoration: none;}
 #navbar-close-lnk {color: rgba(255, 255, 255, 0.85);font-size: 35px;float: right;}
 .rtl #navbar-close-lnk {float: left;}
 
+/* Lang */
+.lang-lnk{border-left: 1px solid;padding-left: .9rem;}
+.lang-lnk a{color: #fff;font-weight: bold;}
+.lang-lnk a:hover {
+    color: rgba(255,255,255,.75);
+}
+
 /* Headings */
 .heading-blk{text-transform: capitalize;}
 .heading-tit{font-size: 2.2rem;position: relative;display:inline-block;font-weight: bold;}
@@ -728,10 +735,9 @@ textarea.form-control{resize:none;height:100px;}
 
 @media (max-width: 991.98px) {
     /* Heade */
-    .header-logo-container{    width: 100%;
-        flex-direction: row-reverse;
-        justify-content: space-between;}
-
+    .header-logo-container{padding-right:60px;width: 100%;flex-direction: row-reverse;justify-content: space-between;}
+    .lang-lnk{position: absolute;right: 0;}
+        
     .navbar-collapse{flex-grow: 1;}
     #navbar-toggler-lnk{display: flex;}
     #navbar-close-lnk{display:block;}
