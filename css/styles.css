@@ -222,6 +222,11 @@ a:hover, .btn-link:hover{text-decoration: none;}
 
 
 /******************** My Horizontal Slider ********************/
+#services-slider .owl-stage{display:flex;}
+#services-slider .owl-item{height:inherit;}
+#services-slider .item,
+#services-slider .horz-slide
+{height:100%;}
 .horz-slide .row{align-items: center;height: 100%;}
 
 .cap-tit, .cap-txt{text-transform: capitalize;}
@@ -235,15 +240,15 @@ a:hover, .btn-link:hover{text-decoration: none;}
 .mocks-mob img,
 .mocks-none img{transition: all 1s ease;}
 
-.horz-slide{opacity: 0;}
-.horz-slide.active{opacity: 1;}
+.horz-slide{opacity: 0;overflow:hidden;}
+.active .horz-slide{opacity: 1;}
 .horz-slide .horz-slide-img{transform:translateX(25px);}
 .horz-slide .cap-tit{transform:translateY(-25px);}
 .horz-slide .cap-txt{transform:translateY(25px);}
-.horz-slide.active .horz-slide-img{transform:translateX(0);}
-.horz-slide.active .cap-tit{transform:translateY(0);}
-.horz-slide.active .cap-txt{transform:translateY(0);}
-.horz-slide.active .mocks-mob img{margin: 0 -80px;}
+.active .horz-slide .horz-slide-img{transform:translateX(0);}
+.active .horz-slide .cap-tit{transform:translateY(0);}
+.active .horz-slide .cap-txt{transform:translateY(0);}
+.active .horz-slide .mocks-mob img{margin: 0 -80px;}
 
 #horz-slider{overflow: hidden;}
 .horz-slides-wrapper{display:flex;position: relative;left:0;}
@@ -302,6 +307,8 @@ a:hover, .btn-link:hover{text-decoration: none;}
     /* background: #097bd8; */
     display: inline-block;
 }
+
+#services-slider .owl-nav{font-size:1.3rem;}
 
 /* Services Blk */
 .service-item .service-img, .service-item .service-tit{transition: all 1.5s ease;}
@@ -590,6 +597,16 @@ input[type=number]::-webkit-outer-spin-button {
 }
 textarea.form-control{resize:none;height:100px;}
 
+/* Owl */
+/* f104 */
+.owl-prev:before{content: '\f104';}
+.owl-next:before{content: '\f105';}
+.owl-prev:before, .owl-next:before{
+    font-family: 'Font Awesome 5 Free';font-weight:900;
+}
+.owl-prev span, .owl-next span{display:none}
+
+
 /*************** RESPONSIVE ********************/
 /*Extra small devices (portrait phones, less than 576px)*/
 @media (max-width: 575.98px) {
@@ -729,7 +746,7 @@ textarea.form-control{resize:none;height:100px;}
 
     /* Services Slider */
     .horz-slide .mocks-mob img {margin: 0 -40px;}
-    .horz-slide.active .mocks-mob img {margin: 0 -50px;}
+    .active .horz-slide .mocks-mob img {margin: 0 -50px;}
 
     /* About Us Page */
     .about-desc-logo img{height: auto;width:100%;max-width: 350px;}
@@ -744,7 +761,7 @@ textarea.form-control{resize:none;height:100px;}
 /*Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) and (max-width: 1199.98px) {
     /* Services Slider */
-    .horz-slide.active .mocks-mob img {margin: 0 -70px;}
+    .active .horz-slide .mocks-mob img {margin: 0 -70px;}
 }
 /*Extra large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) {

@@ -145,6 +145,46 @@ function toggleCareers(){
     
     
 }
+function servicesSlider(){
+    let servicesSlider = $('#services-slider .owl-carousel');
+    servicesSlider.owlCarousel({
+        items:1,
+        // loop:true,
+        margin:10,
+        nav: true,
+        animateOut: 'fadeOut',
+        autoplay:true,
+        autoplayTimeout:3000,
+        autoplayHoverPause:true
+    });
+
+    setTimeout(function(){
+        let horzSlidesNo = $('#services-slider .owl-stage > div').length;
+        let sliderNumHTML = `<span class="horz-slide-num">
+                <span class="horz-slide-active-num">1</span>
+                /
+                <span class="horz-slide-total-num">`+horzSlidesNo+`</span>
+            </span>`;
+        let slideTitHTML = `<div class="horz-slide-tit"></div>`;
+    
+        $(sliderNumHTML).insertBefore('#services-slider .owl-next');
+        $(slideTitHTML).insertBefore('#services-slider .owl-nav');
+
+        $('.horz-slide-tit').text($('#services-slider .owl-item:first-child .horz-slide').attr('data-title'));
+    }, 300);
+
+    servicesSlider.on('changed.owl.carousel', function(event) {
+        setTimeout(function(){
+            let slideNum = $('#services-slider .active .horz-slide').attr('data-num');
+            let slideTit = $('#services-slider .active .horz-slide').attr('data-title');
+            
+            $('.horz-slide-tit').text(slideTit);
+            $('.horz-slide-active-num').text(slideNum);
+        }, 300);
+    });
+    
+
+}
 
 let distance;
 $(window).scroll(function() {
@@ -185,6 +225,12 @@ $(document).ready(function () {
     initiateAnimation();
     textActiveAnimation();
     slidingTit();
+    
+    if($('#services-slider')){
+        servicesSlider();
+    }
+    
+    
 
     if($('#project-carousel')){
         $('#project-carousel.mob-carousel').owlCarousel({
