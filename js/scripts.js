@@ -18,7 +18,8 @@ function fixedHeader(){
 function initiateAnimation(){
     AOS.init({
         easing: 'ease-in-out-sine',
-        duration: 800
+        duration: 800,
+        once: true,
     });
 }
 
