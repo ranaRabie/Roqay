@@ -45,6 +45,10 @@ function scrollToBody(){
     });
 }
 function verticalSliderHandling(){
+
+    $('.nav-slider a:first-child').addClass('active');
+    $('#main-slider .slide:first-child').addClass('slide-active');
+
     // Link Click Slider Animation
     $('.nav-slider a').click(function(){
         // Get Slide Id
