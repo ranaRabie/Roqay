@@ -44,7 +44,6 @@ function scrollToBody(){
         // horzSliderAutoPlay();
     });
 }
-
 function verticalSliderHandling(){
     // Link Click Slider Animation
     $('.nav-slider a').click(function(){
@@ -66,18 +65,30 @@ function verticalSliderHandling(){
         $('.slide').not($(slideId)).removeClass('slide-active');
         
         //repeat Canvas Animation
-        // if($(slideId).is(':first-child')){
-        //     clearFrame();
-        // }
+        if($(slideId).is(':first-child')){
+            clearFrame();
+        }
+
+        
+        clearInterval(Anim);
+        // setInterval(verticalSliderAnimInterval, 9500);
+        Anim = setInterval(function(){
+            if($('.nav-slider a.active').is(':last-child')){
+                $('.nav-slider a:first-child').click();
+            }else{
+                $('.nav-slider a.active').next().click();
+            }
+        }, 7500);
+        
     });
 
-    setInterval(function() {
+    let Anim = setInterval(function(){
         if($('.nav-slider a.active').is(':last-child')){
             $('.nav-slider a:first-child').click();
         }else{
             $('.nav-slider a.active').next().click();
         }
-    }, 5500);
+    }, 7500);
     
 
     // Mouse Wheel Slider Animation
