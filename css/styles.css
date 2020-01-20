@@ -176,6 +176,7 @@ a:hover, .btn-link:hover{text-decoration: none;}
 
 /* .heading-tit:before{content:'';position:absolute;right:0;top:0;width:100px;height:100%;display:block;z-index: 1;max-height:42px;} */
 .heading-tit span{position: relative;display: inline-block;/*display: block;*/z-index: 10;}
+.heading-tit span span{text-transform: initial;}
 .heading-subtit{font-size: 1.4rem;}
 .heading-md .heading-subtit{font-size: 1.2rem;}
 
