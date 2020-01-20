@@ -171,9 +171,15 @@ a:hover, .btn-link:hover{text-decoration: none;}
 /* Headings */
 .heading-blk{text-transform: capitalize;}
 .heading-tit{font-size: 2.2rem;position: relative;display:inline-block;font-weight: bold;}
-.heading-tit:before{content:'';position:absolute;right:0;top:0;width:100px;height:100%;display:block;z-index: 1;max-height:42px;}
-.heading-tit span{position: relative;display: block;z-index: 10;}
+
+.heading-md .heading-tit{font-size: 1.75rem;}
+
+/* .heading-tit:before{content:'';position:absolute;right:0;top:0;width:100px;height:100%;display:block;z-index: 1;max-height:42px;} */
+.heading-tit span{position: relative;display: inline-block;/*display: block;*/z-index: 10;}
 .heading-subtit{font-size: 1.4rem;}
+.heading-md .heading-subtit{font-size: 1.2rem;}
+
+
 
 /* Page Title */
 /* #pg-tit{display: flex;align-items: center;justify-content: center;padding-top:91px;} */

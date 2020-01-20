@@ -226,6 +226,10 @@ $(document).ready(function () {
     initiateAnimation();
     textActiveAnimation();
     slidingTit();
+
+    $('.heading-tit span').html(function (index, html) {
+        return html.slice(0,html.length - 6) + '<span>' + html.slice(html.length - 6) + '</span>';
+    });
     
     if($('#services-slider')){
         servicesSlider();

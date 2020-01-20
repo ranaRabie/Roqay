@@ -108,7 +108,10 @@ body{color: map-get($colors, main);background-color: map-get($colors, blackColor
 }
 
 /* Headings */
-.heading-tit:before{background: map-get($colors, primary );}
+.heading-tit:before, .heading-tit span span{
+  background: map-get($colors, primary );
+}
+.heading-tit span span{color: map-get($colors, whiteColor );}
 
 /* Page Title */
 #pg-tit{background: map-get($colors, primaryDark );}

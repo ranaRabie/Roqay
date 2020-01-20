@@ -120,8 +120,12 @@ body {
 }
 
 /* Headings */
-.heading-tit:before {
+.heading-tit:before, .heading-tit span span {
   background: #097bd8;
+}
+
+.heading-tit span span {
+  color: #fff;
 }
 
 /* Page Title */
